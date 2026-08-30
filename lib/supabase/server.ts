@@ -1,5 +1,5 @@
-// lib/supabase/server.ts — Ny fil — Supabase-klient til Server Components, Server Actions og Route Handlers
-import { createServerClient } from "@supabase/ssr";
+// lib/supabase/server.ts — Opdatering — tilføjer CookieOptions-type for at fjerne TS7006/TS7031-fejl
+import { createServerClient, type CookieOptions } from "@supabase/ssr";
 import { cookies } from "next/headers";
 
 export async function createClient() {
@@ -13,7 +13,7 @@ export async function createClient() {
         getAll() {
           return cookieStore.getAll();
         },
-        setAll(cookiesToSet) {
+        setAll(cookiesToSet: { name: string; value: string; options: CookieOptions }[]) {
           try {
             cookiesToSet.forEach(({ name, value, options }) =>
               cookieStore.set(name, value, options)
