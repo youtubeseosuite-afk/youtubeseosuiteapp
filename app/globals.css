@@ -1,0 +1,7 @@
+/* // app/globals.css — Ny fil — Tailwind-import og basis-tema */
+@import "tailwindcss";
+
+body {
+  background-color: #ffffff;
+  color: #111111;
+}
