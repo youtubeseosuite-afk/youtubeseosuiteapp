@@ -1,6 +1,6 @@
+{
   "//": "package.json — Ny fil — projekt-dependencies for Next.js 16 + Supabase-scaffold (YouTube SEO-værktøj)",
-{  
-"name": "youtube-seo-tool",
+  "name": "youtube-seo-tool",
   "version": "0.1.0",
   "private": true,
   "scripts": {
